@@ -1,0 +1,88 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Login Page </title>  
+<style>
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: #e9e9e9;
+}  
+
+.passContainer {
+    align-content: center;
+    align-self: center;
+}
+
+.passInput {
+    max-width: 300px;
+}
+
+button {   
+       background-color: #4CAF50;   
+       width: 300px;  
+       
+        color: black;   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;  
+        }   
+ form {   
+        border: 3px solid #f1f1f1;   
+    }   
+ input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;   
+        box-sizing: border-box;   
+        
+    }  
+ button:hover {   
+        opacity: 0.7; 
+        max-width: 300px;
+    }   
+
+.headers {
+    font-family: Shojumaru;
+}
+        
+     
+ .container {   
+        padding: 25px;   
+        text-align: center;
+        font-family: Shojumaru;
+    }   
+</style>   
+
+
+<script>
+    function checkPass() {
+        var pass = document.getElementById('password').value;
+        if(pass == "3610") {
+            document.getElementById("clues").innerHTML = "CLUE : Give us some ideas."
+            document.getElementById("clues2").innerHTML = "PASSWORD FOR THE NEXT CLUE : 8240"
+        }
+        else {
+            alert("WRONG PASSWORD!!! CHECK THE LAST CLUE FOR PASSWORD")
+        }
+    }
+</script>
+
+
+
+</head>    
+<body> 
+        <div class="container">
+            <div class="passContainer">
+                <h1 class="headers">MAZED</h1>
+            <input type="password" placeholder="Enter Password" id="password" class = "passInput" required>
+            </div>  
+            <button type="button" onclick="checkPass()">GO</button>    
+        </div>
+    <div class="container" id = "clues"></div>
+    <div class="container" id="clues2"></div>
+</body>     
+</html> 
